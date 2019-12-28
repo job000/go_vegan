@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       initialRoute: PictureScanner.screenId,
       routes: {
         PictureScanner.screenId:(context)=> PictureScanner(),
-        BarcodePage.screenId:(context)=> BarcodePage(),
+        //BarcodePage.screenId:(context)=> BarcodePage(),
         //BeLocation.screenId:(context)=>BeLocation(),
       },
     );

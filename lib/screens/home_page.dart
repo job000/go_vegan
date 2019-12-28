@@ -4,12 +4,14 @@ import 'dart:ui';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_vegan/components/drawer_page.dart';
 import 'package:go_vegan/components/gallery_screen.dart';
 import 'package:go_vegan/components/string_manipulation.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:camera/camera.dart';
 import 'detector_painters.dart';
 import 'package:go_vegan/components/veganAdditives.dart';
+
 
 class PictureScanner extends StatefulWidget {
   static final String screenId = "PictureScanner";
@@ -215,7 +217,9 @@ class _PictureScannerState extends State<PictureScanner> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
+      drawer: DrawerPage(),
       appBar: AppBar(
         title: Center(
           child: Text(
@@ -251,6 +255,21 @@ class _PictureScannerState extends State<PictureScanner> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  Text('Food additive, any of various chemical substances added '
+                      'to foods to produce specific desirable effects. Additives '
+                      'such as salt, spices, and sulfites have been used since ancient '
+                      'times to preserve foods and make them more palatable. With the '
+                      'increased processing of foods in the 20th century, there came a '
+                      'need for both the greater use of and new types of food additives. '
+                      'Many modern products, such as low-calorie, snack, and ready-to-eat '
+                      'convenience foods, would not be possible without food additives.'),
+                    Text('There are four general categories of'
+                    'food additives: nutritional additives, '
+                    'processing agents, preservatives, and sensory '
+                    'agents. These are not strict classifications, as '
+                    'many additives fall into more than one category. '
+                    'For more information on additives, see emulsifier; '
+                  'food colouring; nutritional supplement; and preservative.'),
                   Text('Select or take a photo from camera',
                     style: TextStyle(fontSize: 22.0,
                         fontWeight: FontWeight.bold,
