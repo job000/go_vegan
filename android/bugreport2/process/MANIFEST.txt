@@ -1,0 +1,200 @@
+[
+  {
+    "type": "run",
+    "body": {
+      "pid": 98548,
+      "basename": "000.git.98548",
+      "command": [
+        "git",
+        "-c",
+        "log.showSignature=false",
+        "log",
+        "-n",
+        "1",
+        "--pretty=format:%H"
+      ],
+      "workingDirectory": "/Users/johnmichaelobligar/development/flutter",
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98549,
+      "basename": "001.git.98549",
+      "command": [
+        "git",
+        "describe",
+        "--match",
+        "v*.*.*",
+        "--first-parent",
+        "--long",
+        "--tags"
+      ],
+      "workingDirectory": "/Users/johnmichaelobligar/development/flutter",
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98550,
+      "basename": "002.git.98550",
+      "command": [
+        "git",
+        "rev-parse",
+        "--abbrev-ref",
+        "--symbolic",
+        "@{u}"
+      ],
+      "workingDirectory": "/Users/johnmichaelobligar/development/flutter",
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98551,
+      "basename": "003.git.98551",
+      "command": [
+        "git",
+        "ls-remote",
+        "--get-url",
+        "origin"
+      ],
+      "workingDirectory": "/Users/johnmichaelobligar/development/flutter",
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98552,
+      "basename": "004.git.98552",
+      "command": [
+        "git",
+        "-c",
+        "log.showSignature=false",
+        "log",
+        "-n",
+        "1",
+        "--pretty=format:%ad",
+        "--date=iso"
+      ],
+      "workingDirectory": "/Users/johnmichaelobligar/development/flutter",
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "can_run",
+    "body": {
+      "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "result": true
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98553,
+      "basename": "006.git.98553",
+      "command": [
+        "git",
+        "rev-parse",
+        "--abbrev-ref",
+        "HEAD"
+      ],
+      "workingDirectory": "/Users/johnmichaelobligar/development/flutter",
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98554,
+      "basename": "007.sw_vers.98554",
+      "command": [
+        "sw_vers",
+        "-productName"
+      ],
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98555,
+      "basename": "008.sw_vers.98555",
+      "command": [
+        "sw_vers",
+        "-productVersion"
+      ],
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98556,
+      "basename": "009.sw_vers.98556",
+      "command": [
+        "sw_vers",
+        "-buildVersion"
+      ],
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  }
+]

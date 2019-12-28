@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "203543233397",
+    "firebase_url": "https://veganskprodukter.firebaseio.com",
+    "project_id": "veganskprodukter",
+    "storage_bucket": "veganskprodukter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203543233397:android:9b973ef3b9f43f19fcc93c",
+        "android_client_info": {
+          "package_name": "com.obligar.go_vegan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203543233397-9an6c1gjopn5osqdd56u22i9mkeqc424.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.obligar.go_vegan",
+            "certificate_hash": "b20c902205f06432bb384ca2f9bd92d6bc59bc98"
+          }
+        },
+        {
+          "client_id": "203543233397-e2acm9s8dfs3v7m62cdbi9msbgo401b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJKoy0PAUSeIxEdsxquVgg6Bz0QDGhd4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203543233397-e2acm9s8dfs3v7m62cdbi9msbgo401b5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "203543233397-ljgf303ch8o2bkb1qvd0pod8rtd26gvq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.obligar.goVegan"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

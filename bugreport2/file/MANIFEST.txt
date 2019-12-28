@@ -1,0 +1,2790 @@
+[
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 42
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/lockfile"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@1",
+    "error": null,
+    "timestamp": 46
+  },
+  {
+    "type": "invoke",
+    "method": "openSync",
+    "positionalArguments": [],
+    "namedArguments": {
+      "mode": "WRITE"
+    },
+    "object": "RecordingFile@1",
+    "result": "RecordingRandomAccessFile@2",
+    "error": null,
+    "timestamp": 56
+  },
+  {
+    "type": "invoke",
+    "method": "lockSync",
+    "positionalArguments": [
+      "FileLock",
+      0,
+      -1
+    ],
+    "namedArguments": {},
+    "object": "RecordingRandomAccessFile@2",
+    "result": null,
+    "error": null,
+    "timestamp": 63
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 66
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 66
+  },
+  {
+    "type": "get",
+    "property": "currentDirectory",
+    "object": "__fs__",
+    "result": "RecordingDirectory@3",
+    "error": null,
+    "timestamp": 66
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@3",
+    "result": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan",
+    "error": null,
+    "timestamp": 68
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 69
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Documents/Flutter/go_vegan/bin/flutter"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "notFound",
+    "error": null,
+    "timestamp": 70
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 70
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 71
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Documents/Flutter/bin/flutter"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "notFound",
+    "error": null,
+    "timestamp": 71
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 71
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 71
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Documents/bin/flutter"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "notFound",
+    "error": null,
+    "timestamp": 71
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 72
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 72
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/bin/flutter"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "notFound",
+    "error": null,
+    "timestamp": 72
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 72
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 72
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "/Users/bin/flutter"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "notFound",
+    "error": null,
+    "timestamp": 72
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 72
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 72
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "/bin/flutter"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "notFound",
+    "error": null,
+    "timestamp": 72
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 73
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      ".packages"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "file",
+    "error": null,
+    "timestamp": 73
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      ".packages"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@4",
+    "error": null,
+    "timestamp": 73
+  },
+  {
+    "type": "invoke",
+    "method": "readAsBytesSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingFile@4",
+    "result": "!005..packages",
+    "error": null,
+    "timestamp": 74
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 97
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "file:///Users/johnmichaelobligar/development/flutter/"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@6",
+    "error": null,
+    "timestamp": 97
+  },
+  {
+    "type": "get",
+    "property": "absolute",
+    "object": "RecordingFile@6",
+    "result": "RecordingFile@7",
+    "error": null,
+    "timestamp": 98
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingFile@7",
+    "result": "/Users/johnmichaelobligar/development/flutter/",
+    "error": null,
+    "timestamp": 100
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "directory",
+    "error": null,
+    "timestamp": 101
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 102
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@8",
+    "error": null,
+    "timestamp": 102
+  },
+  {
+    "type": "invoke",
+    "method": "resolveSymbolicLinksSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@8",
+    "result": "/Users/johnmichaelobligar/development/flutter",
+    "error": null,
+    "timestamp": 103
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 103
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@9",
+    "error": null,
+    "timestamp": 103
+  },
+  {
+    "type": "invoke",
+    "method": "resolveSymbolicLinksSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@9",
+    "result": "/Users/johnmichaelobligar/development/flutter",
+    "error": null,
+    "timestamp": 104
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 107
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 142
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 167
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/version"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@10",
+    "error": null,
+    "timestamp": 168
+  },
+  {
+    "type": "invoke",
+    "method": "writeAsStringSync",
+    "positionalArguments": [
+      "1.12.13+hotfix.5"
+    ],
+    "namedArguments": {
+      "mode": "WRITE",
+      "encoding": "utf-8",
+      "flush": false
+    },
+    "object": "RecordingFile@10",
+    "result": null,
+    "error": null,
+    "timestamp": 168
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 175
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 183
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 225
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 225
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@11",
+    "error": null,
+    "timestamp": 226
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@11",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 226
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/flutter_version_check.stamp"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@12",
+    "error": null,
+    "timestamp": 226
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingFile@12",
+    "result": true,
+    "error": null,
+    "timestamp": 226
+  },
+  {
+    "type": "invoke",
+    "method": "readAsStringSync",
+    "positionalArguments": [],
+    "namedArguments": {
+      "encoding": "utf-8"
+    },
+    "object": "RecordingFile@12",
+    "result": "!013.flutter_version_check.stamp",
+    "error": null,
+    "timestamp": 227
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 235
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 235
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@14",
+    "error": null,
+    "timestamp": 235
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@14",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 236
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/flutter_version_check.stamp"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@15",
+    "error": null,
+    "timestamp": 236
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingFile@15",
+    "result": true,
+    "error": null,
+    "timestamp": 236
+  },
+  {
+    "type": "invoke",
+    "method": "readAsStringSync",
+    "positionalArguments": [],
+    "namedArguments": {
+      "encoding": "utf-8"
+    },
+    "object": "RecordingFile@15",
+    "result": "!016.flutter_version_check.stamp",
+    "error": null,
+    "timestamp": 236
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 256
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 344
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/.flutter_settings"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@17",
+    "error": null,
+    "timestamp": 344
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingFile@17",
+    "result": false,
+    "error": null,
+    "timestamp": 345
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 347
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/.flutter_tool_state"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@18",
+    "error": null,
+    "timestamp": 348
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingFile@18",
+    "result": true,
+    "error": null,
+    "timestamp": 348
+  },
+  {
+    "type": "invoke",
+    "method": "readAsStringSync",
+    "positionalArguments": [],
+    "namedArguments": {
+      "encoding": "utf-8"
+    },
+    "object": "RecordingFile@18",
+    "result": "!019..flutter_tool_state",
+    "error": null,
+    "timestamp": 348
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "pubspec.yaml"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "file",
+    "error": null,
+    "timestamp": 372
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 372
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "lib/main.dart"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "file",
+    "error": null,
+    "timestamp": 373
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/usr/bin/xcodebuild"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@20",
+    "error": null,
+    "timestamp": 401
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingFile@20",
+    "result": true,
+    "error": null,
+    "timestamp": 402
+  },
+  {
+    "type": "get",
+    "property": "currentDirectory",
+    "object": "__fs__",
+    "result": "RecordingDirectory@21",
+    "error": null,
+    "timestamp": 1402
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@21",
+    "result": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan",
+    "error": null,
+    "timestamp": 1403
+  },
+  {
+    "type": "invoke",
+    "method": "childFile",
+    "positionalArguments": [
+      "pubspec.yaml"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@21",
+    "result": "RecordingFile@22",
+    "error": null,
+    "timestamp": 1403
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingFile@22",
+    "result": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan/pubspec.yaml",
+    "error": null,
+    "timestamp": 1404
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Documents/Flutter/go_vegan/pubspec.yaml"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "file",
+    "error": null,
+    "timestamp": 1404
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Documents/Flutter/go_vegan/pubspec.yaml"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@23",
+    "error": null,
+    "timestamp": 1404
+  },
+  {
+    "type": "invoke",
+    "method": "readAsStringSync",
+    "positionalArguments": [],
+    "namedArguments": {
+      "encoding": "utf-8"
+    },
+    "object": "RecordingFile@23",
+    "result": "!024.pubspec.yaml",
+    "error": null,
+    "timestamp": 1404
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "example"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@21",
+    "result": "RecordingDirectory@25",
+    "error": null,
+    "timestamp": 1450
+  },
+  {
+    "type": "invoke",
+    "method": "childFile",
+    "positionalArguments": [
+      "pubspec.yaml"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@25",
+    "result": "RecordingFile@26",
+    "error": null,
+    "timestamp": 1451
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingFile@26",
+    "result": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan/example/pubspec.yaml",
+    "error": null,
+    "timestamp": 1452
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Documents/Flutter/go_vegan/example/pubspec.yaml"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "notFound",
+    "error": null,
+    "timestamp": 1452
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1460
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1460
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1460
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1460
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Library/Android/sdk/licenses"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "directory",
+    "error": null,
+    "timestamp": 1460
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1461
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Library/Android/sdk/ndk-bundle"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "directory",
+    "error": null,
+    "timestamp": 1461
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1462
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Library/Android/sdk/ndk-bundle/source.properties"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "file",
+    "error": null,
+    "timestamp": 1462
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Library/Android/sdk/ndk-bundle/source.properties"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@27",
+    "error": null,
+    "timestamp": 1462
+  },
+  {
+    "type": "invoke",
+    "method": "readAsStringSync",
+    "positionalArguments": [],
+    "namedArguments": {
+      "encoding": "utf-8"
+    },
+    "object": "RecordingFile@27",
+    "result": "!028.source.properties",
+    "error": null,
+    "timestamp": 1462
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1465
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1465
+  },
+  {
+    "type": "invoke",
+    "method": "typeSync",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-gcc"
+    ],
+    "namedArguments": {
+      "followLinks": true
+    },
+    "object": "__fs__",
+    "result": "notFound",
+    "error": null,
+    "timestamp": 1465
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1466
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Library/Android/sdk/build-tools"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@29",
+    "error": null,
+    "timestamp": 1466
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@29",
+    "result": true,
+    "error": null,
+    "timestamp": 1466
+  },
+  {
+    "type": "invoke",
+    "method": "listSync",
+    "positionalArguments": [],
+    "namedArguments": {
+      "recursive": false,
+      "followLinks": true
+    },
+    "object": "RecordingDirectory@29",
+    "result": [
+      "RecordingDirectory@30",
+      "RecordingDirectory@31",
+      "RecordingDirectory@32",
+      "RecordingDirectory@33",
+      "RecordingDirectory@34",
+      "RecordingDirectory@35",
+      "RecordingDirectory@36"
+    ],
+    "error": null,
+    "timestamp": 1466
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@30",
+    "result": "27.0.0",
+    "error": null,
+    "timestamp": 1470
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@31",
+    "result": "28.0.2",
+    "error": null,
+    "timestamp": 1470
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@32",
+    "result": "28.0.3",
+    "error": null,
+    "timestamp": 1470
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@33",
+    "result": "26.0.2",
+    "error": null,
+    "timestamp": 1470
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@34",
+    "result": "25.0.2",
+    "error": null,
+    "timestamp": 1470
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@35",
+    "result": "27.0.3",
+    "error": null,
+    "timestamp": 1471
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@36",
+    "result": "29.0.0",
+    "error": null,
+    "timestamp": 1471
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1471
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Library/Android/sdk/platforms"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@37",
+    "error": null,
+    "timestamp": 1471
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@37",
+    "result": true,
+    "error": null,
+    "timestamp": 1472
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1472
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Library/Android/sdk/platforms"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@38",
+    "error": null,
+    "timestamp": 1472
+  },
+  {
+    "type": "invoke",
+    "method": "listSync",
+    "positionalArguments": [],
+    "namedArguments": {
+      "recursive": false,
+      "followLinks": true
+    },
+    "object": "RecordingDirectory@38",
+    "result": [
+      "RecordingDirectory@39",
+      "RecordingDirectory@40",
+      "RecordingDirectory@41",
+      "RecordingDirectory@42",
+      "RecordingDirectory@43",
+      "RecordingDirectory@44",
+      "RecordingDirectory@45",
+      "RecordingDirectory@46"
+    ],
+    "error": null,
+    "timestamp": 1472
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@39",
+    "result": "android-23",
+    "error": null,
+    "timestamp": 1475
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@40",
+    "result": "android-24",
+    "error": null,
+    "timestamp": 1477
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@41",
+    "result": "android-25",
+    "error": null,
+    "timestamp": 1477
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@42",
+    "result": "android-22",
+    "error": null,
+    "timestamp": 1478
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@43",
+    "result": "android-29",
+    "error": null,
+    "timestamp": 1478
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@44",
+    "result": "android-27",
+    "error": null,
+    "timestamp": 1478
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@45",
+    "result": "android-26",
+    "error": null,
+    "timestamp": 1478
+  },
+  {
+    "type": "get",
+    "property": "basename",
+    "object": "RecordingDirectory@46",
+    "result": "android-28",
+    "error": null,
+    "timestamp": 1478
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1480
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Library/Android/sdk/platform-tools/adb"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@47",
+    "error": null,
+    "timestamp": 1480
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingFile@47",
+    "result": true,
+    "error": null,
+    "timestamp": 1480
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1481
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Library/Android/sdk/platform-tools/adb"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@48",
+    "error": null,
+    "timestamp": 1481
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingFile@48",
+    "result": true,
+    "error": null,
+    "timestamp": 1481
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1514
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1515
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@49",
+    "error": null,
+    "timestamp": 1515
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@49",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 1515
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@50",
+    "error": null,
+    "timestamp": 1515
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@50",
+    "result": true,
+    "error": null,
+    "timestamp": 1515
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "libimobiledevice"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@50",
+    "result": "RecordingDirectory@51",
+    "error": null,
+    "timestamp": 1515
+  },
+  {
+    "type": "invoke",
+    "method": "childFile",
+    "positionalArguments": [
+      "idevice_id"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@51",
+    "result": "RecordingFile@52",
+    "error": null,
+    "timestamp": 1516
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingFile@52",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libimobiledevice/idevice_id",
+    "error": null,
+    "timestamp": 1516
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1516
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1516
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@53",
+    "error": null,
+    "timestamp": 1516
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@53",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 1517
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@54",
+    "error": null,
+    "timestamp": 1517
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@54",
+    "result": true,
+    "error": null,
+    "timestamp": 1517
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "libimobiledevice"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@54",
+    "result": "RecordingDirectory@55",
+    "error": null,
+    "timestamp": 1517
+  },
+  {
+    "type": "invoke",
+    "method": "childFile",
+    "positionalArguments": [
+      "ideviceinfo"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@55",
+    "result": "RecordingFile@56",
+    "error": null,
+    "timestamp": 1517
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingFile@56",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libimobiledevice/ideviceinfo",
+    "error": null,
+    "timestamp": 1517
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1517
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1517
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@57",
+    "error": null,
+    "timestamp": 1517
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@57",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 1518
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@58",
+    "error": null,
+    "timestamp": 1518
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@58",
+    "result": true,
+    "error": null,
+    "timestamp": 1518
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "libimobiledevice"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@58",
+    "result": "RecordingDirectory@59",
+    "error": null,
+    "timestamp": 1518
+  },
+  {
+    "type": "invoke",
+    "method": "childFile",
+    "positionalArguments": [
+      "idevicename"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@59",
+    "result": "RecordingFile@60",
+    "error": null,
+    "timestamp": 1518
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingFile@60",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libimobiledevice/idevicename",
+    "error": null,
+    "timestamp": 1518
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1518
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1518
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@61",
+    "error": null,
+    "timestamp": 1518
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@61",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 1518
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@62",
+    "error": null,
+    "timestamp": 1519
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@62",
+    "result": true,
+    "error": null,
+    "timestamp": 1519
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "libimobiledevice"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@62",
+    "result": "RecordingDirectory@63",
+    "error": null,
+    "timestamp": 1519
+  },
+  {
+    "type": "invoke",
+    "method": "childFile",
+    "positionalArguments": [
+      "idevicesyslog"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@63",
+    "result": "RecordingFile@64",
+    "error": null,
+    "timestamp": 1519
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingFile@64",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libimobiledevice/idevicesyslog",
+    "error": null,
+    "timestamp": 1519
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1519
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1519
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@65",
+    "error": null,
+    "timestamp": 1519
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@65",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 1520
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@66",
+    "error": null,
+    "timestamp": 1520
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@66",
+    "result": true,
+    "error": null,
+    "timestamp": 1520
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "libimobiledevice"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@66",
+    "result": "RecordingDirectory@67",
+    "error": null,
+    "timestamp": 1520
+  },
+  {
+    "type": "invoke",
+    "method": "childFile",
+    "positionalArguments": [
+      "idevicescreenshot"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@67",
+    "result": "RecordingFile@68",
+    "error": null,
+    "timestamp": 1520
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingFile@68",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libimobiledevice/idevicescreenshot",
+    "error": null,
+    "timestamp": 1520
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1521
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1521
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@69",
+    "error": null,
+    "timestamp": 1521
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@69",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 1523
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@70",
+    "error": null,
+    "timestamp": 1523
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@70",
+    "result": true,
+    "error": null,
+    "timestamp": 1523
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "libimobiledevice"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@70",
+    "result": "RecordingDirectory@71",
+    "error": null,
+    "timestamp": 1523
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@71",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libimobiledevice",
+    "error": null,
+    "timestamp": 1524
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1524
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1524
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@72",
+    "error": null,
+    "timestamp": 1524
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@72",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 1524
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@73",
+    "error": null,
+    "timestamp": 1524
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@73",
+    "result": true,
+    "error": null,
+    "timestamp": 1525
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "usbmuxd"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@73",
+    "result": "RecordingDirectory@74",
+    "error": null,
+    "timestamp": 1525
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@74",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/usbmuxd",
+    "error": null,
+    "timestamp": 1525
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1525
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1525
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@75",
+    "error": null,
+    "timestamp": 1525
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@75",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 1525
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@76",
+    "error": null,
+    "timestamp": 1526
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@76",
+    "result": true,
+    "error": null,
+    "timestamp": 1526
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "libplist"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@76",
+    "result": "RecordingDirectory@77",
+    "error": null,
+    "timestamp": 1526
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@77",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libplist",
+    "error": null,
+    "timestamp": 1526
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1526
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1526
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@78",
+    "error": null,
+    "timestamp": 1526
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@78",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 1526
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@79",
+    "error": null,
+    "timestamp": 1526
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@79",
+    "result": true,
+    "error": null,
+    "timestamp": 1526
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "openssl"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@79",
+    "result": "RecordingDirectory@80",
+    "error": null,
+    "timestamp": 1526
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@80",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/openssl",
+    "error": null,
+    "timestamp": 1526
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1527
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1527
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@81",
+    "error": null,
+    "timestamp": 1527
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@81",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 1527
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@82",
+    "error": null,
+    "timestamp": 1527
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@82",
+    "result": true,
+    "error": null,
+    "timestamp": 1527
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "ideviceinstaller"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@82",
+    "result": "RecordingDirectory@83",
+    "error": null,
+    "timestamp": 1527
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@83",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/ideviceinstaller",
+    "error": null,
+    "timestamp": 1527
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1527
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1527
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@84",
+    "error": null,
+    "timestamp": 1527
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@84",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 1528
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@85",
+    "error": null,
+    "timestamp": 1528
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@85",
+    "result": true,
+    "error": null,
+    "timestamp": 1528
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "ios-deploy"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@85",
+    "result": "RecordingDirectory@86",
+    "error": null,
+    "timestamp": 1528
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@86",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/ios-deploy",
+    "error": null,
+    "timestamp": 1528
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1528
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1528
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@87",
+    "error": null,
+    "timestamp": 1528
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@87",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 1529
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@88",
+    "error": null,
+    "timestamp": 1529
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@88",
+    "result": true,
+    "error": null,
+    "timestamp": 1529
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "libzip"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@88",
+    "result": "RecordingDirectory@89",
+    "error": null,
+    "timestamp": 1529
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@89",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libzip",
+    "error": null,
+    "timestamp": 1529
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1918
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1918
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@90",
+    "error": null,
+    "timestamp": 1918
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@90",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache",
+    "error": null,
+    "timestamp": 1919
+  },
+  {
+    "type": "invoke",
+    "method": "directory",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingDirectory@91",
+    "error": null,
+    "timestamp": 1919
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@91",
+    "result": true,
+    "error": null,
+    "timestamp": 1919
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "fuchsia"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@91",
+    "result": "RecordingDirectory@92",
+    "error": null,
+    "timestamp": 1919
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "RecordingDirectory@92",
+    "result": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/fuchsia",
+    "error": null,
+    "timestamp": 1919
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1919
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1919
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/fuchsia/tools/dev_finder"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@93",
+    "error": null,
+    "timestamp": 1919
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1920
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/fuchsia/tools/pm"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@94",
+    "error": null,
+    "timestamp": 1920
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingFile@93",
+    "result": false,
+    "error": null,
+    "timestamp": 1920
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingFile@94",
+    "result": false,
+    "error": null,
+    "timestamp": 1920
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "android"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@21",
+    "result": "RecordingDirectory@95",
+    "error": null,
+    "timestamp": 1925
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@95",
+    "result": true,
+    "error": null,
+    "timestamp": 1925
+  },
+  {
+    "type": "invoke",
+    "method": "childDirectory",
+    "positionalArguments": [
+      "ios"
+    ],
+    "namedArguments": {},
+    "object": "RecordingDirectory@21",
+    "result": "RecordingDirectory@96",
+    "error": null,
+    "timestamp": 1926
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingDirectory@96",
+    "result": true,
+    "error": null,
+    "timestamp": 1926
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1936
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Library/Android/sdk/platform-tools/adb"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@97",
+    "error": null,
+    "timestamp": 1936
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingFile@97",
+    "result": true,
+    "error": null,
+    "timestamp": 1936
+  },
+  {
+    "type": "get",
+    "property": "path",
+    "object": "__fs__",
+    "result": {
+      "style": "posix",
+      "cwd": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan"
+    },
+    "error": null,
+    "timestamp": 1936
+  },
+  {
+    "type": "invoke",
+    "method": "file",
+    "positionalArguments": [
+      "/Users/johnmichaelobligar/Library/Android/sdk/platform-tools/adb"
+    ],
+    "namedArguments": {},
+    "object": "__fs__",
+    "result": "RecordingFile@98",
+    "error": null,
+    "timestamp": 1936
+  },
+  {
+    "type": "invoke",
+    "method": "existsSync",
+    "positionalArguments": [],
+    "namedArguments": {},
+    "object": "RecordingFile@98",
+    "result": true,
+    "error": null,
+    "timestamp": 1936
+  }
+]

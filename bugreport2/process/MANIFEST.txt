@@ -1,0 +1,339 @@
+[
+  {
+    "type": "run",
+    "body": {
+      "pid": 98598,
+      "basename": "000.git.98598",
+      "command": [
+        "git",
+        "-c",
+        "log.showSignature=false",
+        "log",
+        "-n",
+        "1",
+        "--pretty=format:%H"
+      ],
+      "workingDirectory": "/Users/johnmichaelobligar/development/flutter",
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98599,
+      "basename": "001.git.98599",
+      "command": [
+        "git",
+        "describe",
+        "--match",
+        "v*.*.*",
+        "--first-parent",
+        "--long",
+        "--tags"
+      ],
+      "workingDirectory": "/Users/johnmichaelobligar/development/flutter",
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98600,
+      "basename": "002.git.98600",
+      "command": [
+        "git",
+        "rev-parse",
+        "--abbrev-ref",
+        "--symbolic",
+        "@{u}"
+      ],
+      "workingDirectory": "/Users/johnmichaelobligar/development/flutter",
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98601,
+      "basename": "003.git.98601",
+      "command": [
+        "git",
+        "ls-remote",
+        "--get-url",
+        "origin"
+      ],
+      "workingDirectory": "/Users/johnmichaelobligar/development/flutter",
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98603,
+      "basename": "004.git.98603",
+      "command": [
+        "git",
+        "-c",
+        "log.showSignature=false",
+        "log",
+        "-n",
+        "1",
+        "--pretty=format:%ad",
+        "--date=iso"
+      ],
+      "workingDirectory": "/Users/johnmichaelobligar/development/flutter",
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "can_run",
+    "body": {
+      "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "result": true
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98604,
+      "basename": "006.git.98604",
+      "command": [
+        "git",
+        "rev-parse",
+        "--abbrev-ref",
+        "HEAD"
+      ],
+      "workingDirectory": "/Users/johnmichaelobligar/development/flutter",
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98605,
+      "basename": "007.sw_vers.98605",
+      "command": [
+        "sw_vers",
+        "-productName"
+      ],
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98606,
+      "basename": "008.sw_vers.98606",
+      "command": [
+        "sw_vers",
+        "-productVersion"
+      ],
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98607,
+      "basename": "009.sw_vers.98607",
+      "command": [
+        "sw_vers",
+        "-buildVersion"
+      ],
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98608,
+      "basename": "010.xcode-select.98608",
+      "command": [
+        "/usr/bin/xcode-select",
+        "--print-path"
+      ],
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98609,
+      "basename": "011.xcodebuild.98609",
+      "command": [
+        "/usr/bin/xcodebuild",
+        "-version"
+      ],
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98613,
+      "basename": "012.adb.98613",
+      "command": [
+        "/Users/johnmichaelobligar/Library/Android/sdk/platform-tools/adb",
+        "devices",
+        "-l"
+      ],
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98614,
+      "basename": "013.idevice_id.98614",
+      "command": [
+        "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libimobiledevice/idevice_id",
+        "-h"
+      ],
+      "environment": {
+        "DYLD_LIBRARY_PATH": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libimobiledevice:/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/usbmuxd:/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libplist:/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/openssl:/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/ideviceinstaller:/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/ios-deploy:/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libzip"
+      },
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98615,
+      "basename": "014.idevice_id.98615",
+      "command": [
+        "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libimobiledevice/idevice_id",
+        "-l"
+      ],
+      "environment": {
+        "DYLD_LIBRARY_PATH": "/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libimobiledevice:/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/usbmuxd:/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libplist:/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/openssl:/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/ideviceinstaller:/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/ios-deploy:/Users/johnmichaelobligar/development/flutter/bin/cache/artifacts/libzip"
+      },
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98616,
+      "basename": "015.simctl.98616",
+      "command": [
+        "/usr/bin/xcrun",
+        "simctl",
+        "list",
+        "--json",
+        "devices"
+      ],
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "system",
+      "stderrEncoding": "system",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  },
+  {
+    "type": "run",
+    "body": {
+      "pid": 98619,
+      "basename": "016.adb.98619",
+      "command": [
+        "/Users/johnmichaelobligar/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5554",
+        "shell",
+        "getprop"
+      ],
+      "includeParentEnvironment": true,
+      "runInShell": false,
+      "stdoutEncoding": "iso-8859-1",
+      "stderrEncoding": "iso-8859-1",
+      "daemon": false,
+      "notResponding": false,
+      "exitCode": 0
+    }
+  }
+]

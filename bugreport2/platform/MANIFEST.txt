@@ -1,0 +1,41 @@
+{
+  "numberOfProcessors": 4,
+  "pathSeparator": "/",
+  "operatingSystem": "macos",
+  "operatingSystemVersion": "Darwin 19.2.0 Darwin Kernel Version 19.2.0: Sat Nov  9 03:47:04 PST 2019; root:xnu-6153.61.1~20/RELEASE_X86_64",
+  "localHostname": "MacBook-Pro.local",
+  "environment": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh",
+    "TMPDIR": "/var/folders/v0/yrhqsyp908l_tsqvyw_c_0xh0000gn/T/",
+    "ZDOTDIR": "",
+    "__INTELLIJ_COMMAND_HISTFILE__": "/Users/johnmichaelobligar/Library/Preferences/AndroidStudio3.5/terminal/history/history-27",
+    "USER": "johnmichaelobligar",
+    "FLUTTER_ROOT": "/Users/johnmichaelobligar/development/flutter",
+    "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.Tf1aZ1Qu47/Listeners",
+    "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x0",
+    "LOGIN_SHELL": "1",
+    "PATH": "/usr/local/bin:/usr/bin:X/bin:/usr/sbin:/sbin:/Users/JohnMichaelObligar/Documents/WebDriver:/Applications/VMware Fusion.app/Contents/Public:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/bin:/Users/johnmichaelobligar/development/flutter/bin",
+    "TERMINAL_EMULATOR": "JetBrains-JediTerm",
+    "PWD": "/Users/johnmichaelobligar/Documents/Flutter/go_vegan",
+    "XPC_FLAGS": "0x0",
+    "XPC_SERVICE_NAME": "0",
+    "SHLVL": "2",
+    "HOME": "/Users/johnmichaelobligar",
+    "LOGNAME": "johnmichaelobligar",
+    "LC_CTYPE": "en_US.UTF-8",
+    "_": "/Users/johnmichaelobligar/development/flutter/bin/cache/dart-sdk/bin/dart"
+  },
+  "executable": "/Users/johnmichaelobligar/development/flutter/bin/cache/dart-sdk/bin/dart",
+  "resolvedExecutable": "/Users/johnmichaelobligar/development/flutter/bin/cache/dart-sdk/bin/dart",
+  "script": "file:///Users/johnmichaelobligar/development/flutter/bin/cache/flutter_tools.snapshot",
+  "executableArguments": [
+    "--packages=/Users/johnmichaelobligar/development/flutter/packages/flutter_tools/.packages"
+  ],
+  "packageRoot": null,
+  "packageConfig": "file:///Users/johnmichaelobligar/development/flutter/packages/flutter_tools/.packages",
+  "version": "2.7.0 (Mon Dec 2 20:10:59 2019 +0100) on \"macos_x64\"",
+  "stdinSupportsAnsi": true,
+  "stdoutSupportsAnsi": true,
+  "localeName": "en-NO"
+}
