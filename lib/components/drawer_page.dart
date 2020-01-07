@@ -1,4 +1,6 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class DrawerPage extends StatefulWidget {
   @override
@@ -20,18 +22,18 @@ class _DrawerPageState extends State<DrawerPage> {
             accountName: Text("John Doe"),
             accountEmail: Text("john.doe@gmail.com"),
             currentAccountPicture: CircleAvatar(
-              backgroundColor:
-              Theme.of(context).platform == TargetPlatform.iOS
+              backgroundColor: Theme.of(context).platform == TargetPlatform.iOS
                   ? Colors.white
-                  : Colors.yellow,
+                  : Colors.white,
               child: Text(
-                "A",
+                "JD",
                 style: TextStyle(fontSize: 40.0),
               ),
             ),
           ),
           ListTile(
-            title: Text('Item 1'),
+            leading: Icon(Icons.assignment),
+            title: Text('Todo list'),
             onTap: () {
               Navigator.pop(context);
               // Update the state of the app.
@@ -39,8 +41,17 @@ class _DrawerPageState extends State<DrawerPage> {
             },
           ),
           ListTile(
-            title: Text('Item 2'),
+            leading: Icon(Icons.account_circle),
+            title: Text('Settings'),
             onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.exit_to_app),
+            title: Text('Exit'),
+            onTap: () {
+              exit(0);
               Navigator.pop(context);
             },
           ),

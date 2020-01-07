@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_vegan/components/custom_textfield.dart';
 import 'package:go_vegan/components/drawer_page.dart';
 import 'package:go_vegan/components/gallery_screen.dart';
 import 'package:go_vegan/components/string_manipulation.dart';
@@ -11,7 +12,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:camera/camera.dart';
 import 'detector_painters.dart';
 import 'package:go_vegan/components/veganAdditives.dart';
-
 
 class PictureScanner extends StatefulWidget {
   static final String screenId = "PictureScanner";
@@ -217,7 +217,6 @@ class _PictureScannerState extends State<PictureScanner> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       drawer: DrawerPage(),
       appBar: AppBar(
@@ -251,46 +250,37 @@ class _PictureScannerState extends State<PictureScanner> {
         ],
       ),
       body: _imageFile == null
-          ? Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text('Food additive, any of various chemical substances added '
-                      'to foods to produce specific desirable effects. Additives '
-                      'such as salt, spices, and sulfites have been used since ancient '
-                      'times to preserve foods and make them more palatable. With the '
-                      'increased processing of foods in the 20th century, there came a '
-                      'need for both the greater use of and new types of food additives. '
-                      'Many modern products, such as low-calorie, snack, and ready-to-eat '
-                      'convenience foods, would not be possible without food additives.'),
-                    Text('There are four general categories of'
-                    'food additives: nutritional additives, '
-                    'processing agents, preservatives, and sensory '
-                    'agents. These are not strict classifications, as '
-                    'many additives fall into more than one category. '
-                    'For more information on additives, see emulsifier; '
-                  'food colouring; nutritional supplement; and preservative.'),
-                  Text('Select or take a photo from camera',
-                    style: TextStyle(fontSize: 22.0,
-                        fontWeight: FontWeight.bold,
-                      color: Colors.black54
-                    ),),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  RaisedButton(
-                    child: Icon(
-                      Icons.camera_alt,
-                      color: Colors.white,
-                    ),
-                    color: Colors.lightBlueAccent,
-                    // Provide an onPressed callback.
-                    onPressed: () {
-                      _showChoiceDialog(context);
-                    },
-                  ),
-                ],
-              ),
+          ? Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Expanded(
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'Select or take a photo from camera',
+                          style: TextStyle(
+                              fontSize: 22.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black54),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        RaisedButton(
+                          child: Icon(
+                            Icons.camera_alt,
+                            color: Colors.white,
+                          ),
+                          color: Colors.lightBlueAccent,
+                          // Provide an onPressed callback.
+                          onPressed: () {
+                            _showChoiceDialog(context);
+                          },
+                        ),
+                      ]),
+                ),
+              ],
             )
           : _getAdditives(),
 
@@ -305,43 +295,92 @@ class _PictureScannerState extends State<PictureScanner> {
     );
   }
 
-  //Vegan additives:
+  //List of additives:
   List<String> veganAdditives = Vegan.veganAdditives;
+  List<String> possiblyVeganAdditives = Vegan.possiblyNonVegan;
+  List<String> nonVeganAdditives = Vegan.nonVegan;
+
   List<String> additivesFromImage = [];
+
   Widget _getAdditives() {
     additivesFromImage = addToAdditiveList(textRecResult);
     String data = '';
-    int additiveCounter = 0;
+    int veganAdditiveCounter = 0;
+    int _possiblyVeganAdditiveCounter = 0;
+    int _nonVeganAdditivesCounter = 0;
+ //additivesFromImage[j].toLowerCase().trim() ==
+    //              veganAdditives[i].toLowerCase().trim()
 
     if (additivesFromImage.length > 0) {
+
+      //For vegan check
       for (int j = 0; j < additivesFromImage.length; j++) {
         for (int i = 0; i < veganAdditives.length; i++) {
-          if (additivesFromImage[j].toLowerCase() ==
-              veganAdditives[i].toLowerCase()) {
-            additiveCounter++;
+          //debugPrint(veganAdditives[i]);
+          if (additivesFromImage[j].toLowerCase().trim()== veganAdditives[i].toLowerCase().trim())
+          {
+            veganAdditiveCounter++;
           } else {
             setState(() {
               data = 'Not Defined';
-
             });
-            break;
           }
         }
       }
 
-      if (additiveCounter == additivesFromImage.length) {
-        debugPrint('Fra Bilder: ${additivesFromImage.length}');
-        debugPrint('Teller: $additiveCounter');
+      //For Possibly Vegan check
+      for (int j = 0; j < additivesFromImage.length; j++) {
+        for (int i = 0; i < possiblyVeganAdditives.length; i++) {
+          //debugPrint(veganAdditives[i]);
+          if (additivesFromImage[j].toLowerCase().trim() == possiblyVeganAdditives[i].toLowerCase().trim())
+          {
+            _possiblyVeganAdditiveCounter++;
+          } else {
+            setState(() {
+              data = 'Not Defined';
+            });
+          }
+        }
+      }
+
+      //For Non Vegan check
+      for (int j = 0; j < additivesFromImage.length; j++) {
+        for (int i = 0; i < nonVeganAdditives.length; i++) {
+          //debugPrint(veganAdditives[i]);
+          if (additivesFromImage[j].toLowerCase().trim() == nonVeganAdditives[i].toLowerCase().trim())
+          {
+            _nonVeganAdditivesCounter++;
+          } else {
+            setState(() {
+              data = 'Not Defined';
+            });
+          }
+        }
+      }
+
+      debugPrint('Fra Bilder: ${additivesFromImage.length}');
+      debugPrint('Vegan: ${veganAdditiveCounter.toString()}');
+
+      debugPrint('Possibly vegan: ${_possiblyVeganAdditiveCounter.toString()}');
+      debugPrint('Non vegan: ${_nonVeganAdditivesCounter.toString()}');
+
+      if (veganAdditiveCounter == additivesFromImage.length && _possiblyVeganAdditiveCounter<=0 && _nonVeganAdditivesCounter<=0) {
 
         setState(() {
           data = 'Vegan';
-          additiveCounter = 0;
+          veganAdditiveCounter = 0;
         });
-      } else {
+      } else if(_possiblyVeganAdditiveCounter>0 && _nonVeganAdditivesCounter<=0) {
         setState(() {
           data = 'Might not be vegan';
-          additiveCounter = 0;
+          _possiblyVeganAdditiveCounter = 0;
         });
+      }else if(_nonVeganAdditivesCounter>0){
+       setState(() {
+         data = 'Not Vegan';
+         _nonVeganAdditivesCounter=0;
+       });
+
       }
     } else {
       data = 'Could not find any additives';

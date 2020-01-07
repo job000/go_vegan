@@ -29,8 +29,9 @@ dependencies:
   path_provider: ^1.5.1
   camera: ^0.5.7+2
   firebase_ml_vision: ^0.9.3+5
-  #barcode_scan: ^1.0.0
+  barcode_scan: ^1.0.0
   image_picker: ^0.6.2+3
+  beauty_textfield: ^0.0.1
 
 dev_dependencies:
   flutter_test:
