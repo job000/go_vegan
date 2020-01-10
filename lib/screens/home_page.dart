@@ -1,17 +1,21 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:ui';
+import 'package:animated_background/animated_background.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_vegan/components/custom_textfield.dart';
 import 'package:go_vegan/components/drawer_page.dart';
 import 'package:go_vegan/components/gallery_screen.dart';
+import 'package:go_vegan/components/logo.dart';
 import 'package:go_vegan/components/string_manipulation.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:camera/camera.dart';
 import 'detector_painters.dart';
 import 'package:go_vegan/components/veganAdditives.dart';
+import 'package:go_vegan/custom_showDialog.dart';
+
 
 class PictureScanner extends StatefulWidget {
   static final String screenId = "PictureScanner";
@@ -20,7 +24,9 @@ class PictureScanner extends StatefulWidget {
   State<StatefulWidget> createState() => _PictureScannerState();
 }
 
-class _PictureScannerState extends State<PictureScanner> {
+class _PictureScannerState extends State<PictureScanner> with TickerProviderStateMixin {
+
+  Color listTileColor;
   File _imageFile;
   Size _imageSize;
   dynamic _scanResults;
@@ -102,14 +108,18 @@ class _PictureScannerState extends State<PictureScanner> {
                   ),
                   GestureDetector(
                     child: Text(
-                      'Exit Application',
+                      'Reset',
                       style: TextStyle(
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold,
                           color: Colors.black54),
                     ),
                     onTap: () {
-                      SystemNavigator.pop();
+                      //SystemNavigator.pop();
+                      setState(() {
+                        Navigator.pop(context);
+                        _imageFile = null;
+                      });
                     },
                   )
                 ],
@@ -218,71 +228,59 @@ class _PictureScannerState extends State<PictureScanner> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      backgroundColor: Colors.white,
       drawer: DrawerPage(),
-      appBar: AppBar(
-        title: Center(
-          child: Text(
-            'Additives Checker Demo',
-            textAlign: TextAlign.center,
-          ),
-        ),
-        actions: <Widget>[
-          PopupMenuButton<Detector>(
-            onSelected: (Detector result) {
-              _currentDetector = result;
-              if (_imageFile != null) _scanImage(_imageFile);
-            },
-            itemBuilder: (BuildContext context) => <PopupMenuEntry<Detector>>[
-              const PopupMenuItem<Detector>(
-                child: Text('Detect Barcode'),
-                value: Detector.barcode,
+
+      body: SafeArea(
+        child: _imageFile == null
+            ? Center(
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                flex: 1,
+                child: TextField(
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder()
+                    )
+                ),
               ),
-              const PopupMenuItem<Detector>(
-                child: Text('Detect Label'),
-                value: Detector.label,
-              ),
-              const PopupMenuItem<Detector>(
-                child: Text('Detect Text'),
-                value: Detector.text,
+              Expanded(
+                flex: 10,
+                child: Container(
+                  color: listTileColor,
+                  child: ListView.builder(
+                    itemCount: veganAdditives.length,
+                    itemBuilder: (context, index) {
+                      return Card(
+                        child: ListTile(
+                          leading: Icon(Icons.info),
+                          title: Text(
+                            veganAdditives[index],
+                            style: TextStyle(
+                                fontSize: 18.0,
+                                color: Colors.black54,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          trailing: Icon(Icons.arrow_forward_ios),
+
+                          onTap: (){
+                            setState(() {
+                              //navigateToDetail(additivesFromImage[index]);
+                            });
+                          },
+                        ),
+                      );
+
+                    },
+                  ),
+                ),
               ),
             ],
           ),
-        ],
+        )
+            : _getAdditives(),
       ),
-      body: _imageFile == null
-          ? Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Expanded(
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          'Select or take a photo from camera',
-                          style: TextStyle(
-                              fontSize: 22.0,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black54),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        RaisedButton(
-                          child: Icon(
-                            Icons.camera_alt,
-                            color: Colors.white,
-                          ),
-                          color: Colors.lightBlueAccent,
-                          // Provide an onPressed callback.
-                          onPressed: () {
-                            _showChoiceDialog(context);
-                          },
-                        ),
-                      ]),
-                ),
-              ],
-            )
-          : _getAdditives(),
 
       //_buildImage(),
       floatingActionButton: FloatingActionButton(
@@ -385,7 +383,7 @@ class _PictureScannerState extends State<PictureScanner> {
     } else {
       data = 'Could not find any additives';
     }
-    Color listTileColor;
+
     //return Text(data);
     return Center(
       child: Column(
@@ -418,8 +416,15 @@ class _PictureScannerState extends State<PictureScanner> {
                             fontWeight: FontWeight.bold),
                       ),
                       trailing: Icon(Icons.arrow_forward_ios),
+
+                      onTap: (){
+                        setState(() {
+                          navigateToDetail(additivesFromImage[index]);
+                        });
+                      },
                     ),
                   );
+
                 },
               ),
             ),
@@ -427,6 +432,15 @@ class _PictureScannerState extends State<PictureScanner> {
         ],
       ),
     );
+  }
+
+  void navigateToDetail(String additiveIdentifier) async {
+    //NoteDetail(note, title);
+    debugPrint("HER FRA HOME_PAGE: $additiveIdentifier");
+      showDialog(context: context, builder: (BuildContext context)=>CustomDialogPage(additiveIdentifier: additiveIdentifier));
+
+      //Navigator.push(context, MaterialPageRoute(builder:(context)=>CustomDialogPage(additiveIdentifier: additiveIdentifier)));
+
   }
 
   @override

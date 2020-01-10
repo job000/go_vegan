@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_vegan/screens/loginPage.dart';
 
 class DrawerPage extends StatefulWidget {
   @override
@@ -33,9 +34,10 @@ class _DrawerPageState extends State<DrawerPage> {
           ),
           ListTile(
             leading: Icon(Icons.assignment),
-            title: Text('Todo list'),
+            title: Text('Log Out'),
             onTap: () {
               Navigator.pop(context);
+              Navigator.pushNamed(context,LogInPage.screenId);
               // Update the state of the app.
               // ...
             },

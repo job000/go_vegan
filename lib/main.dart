@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_vegan/screens/barcode_page.dart';
+import 'package:go_vegan/screens/loginPage.dart';
 import 'screens/home_page.dart';
+import 'custom_showDialog.dart';
 
 
 void main() {
@@ -21,6 +23,8 @@ class MyApp extends StatelessWidget {
 
       initialRoute: PictureScanner.screenId,
       routes: {
+
+        LogInPage.screenId:(context)=>LogInPage(),
         PictureScanner.screenId:(context)=> PictureScanner(),
         //BarcodePage.screenId:(context)=> BarcodePage(),
         //BeLocation.screenId:(context)=>BeLocation(),
