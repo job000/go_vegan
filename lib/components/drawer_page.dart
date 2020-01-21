@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:go_vegan/screens/loginPage.dart';
+import 'package:go_vegan/screens/login_page.dart';
 
 class DrawerPage extends StatefulWidget {
   @override

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:go_vegan/screens/barcode_page.dart';
-import 'package:go_vegan/screens/loginPage.dart';
-import 'screens/home_page.dart';
-import 'custom_showDialog.dart';
+import 'package:go_vegan/models/dev_only.dart';
+import 'package:go_vegan/screens/login_page.dart';
+import 'screens/picture_scanner.dart';
 
 
 void main() {
@@ -17,15 +16,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Butikkvare',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          primarySwatch: Colors.blue
-      ),
+      theme: ThemeData(primaryColor: Colors.white),
 
       initialRoute: PictureScanner.screenId,
       routes: {
 
         LogInPage.screenId:(context)=>LogInPage(),
         PictureScanner.screenId:(context)=> PictureScanner(),
+        HomePage.screenId:(context)=> HomePage(),
         //BarcodePage.screenId:(context)=> BarcodePage(),
         //BeLocation.screenId:(context)=>BeLocation(),
       },

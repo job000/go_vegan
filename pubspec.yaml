@@ -35,6 +35,8 @@ dependencies:
   firebase_auth: ^0.15.3
   firebase_database: ^3.1.1
   animated_background: ^1.0.5
+  sqflite: ^1.2.0
+  search_widget: ^1.0.1
 
 
 dev_dependencies:
