@@ -8,14 +8,15 @@ class DatabaseHelper {
   static final _databaseName = "MyDatabase.db";
   static final _databaseVersion = 1;
 
-  static final table = 'my_table';
+  static final table = 'additivesTable';
 
   static final columnId = '_id';
+  static final columnTitle = '_title';
   static final columnName = '_name';
-  static final columnColor = '_color';
+  static final columnSuitableFor = '_suitablefor';
   static final columnDescription = '_description';
   static final columnCategory = '_category';
-  static final columnTitle = '_title';
+  static final columnStatus = '_status';
 
 
   // make this a singleton class
@@ -50,11 +51,30 @@ class DatabaseHelper {
             $columnId INTEGER PRIMARY KEY,
             $columnTitle TEXT,
             $columnName TEXT,
-            $columnColor TEXT,
+            $columnSuitableFor TEXT,
             $columnDescription TEXT,
-            $columnCategory TEXT
+            $columnCategory TEXT,
+            $columnStatus TEXT
           )
           ''');
+
+
+    await db.rawInsert(
+        'INSERT INTO $table(_title,_name,_suitablefor,_description,_category, _status) VALUES(?,?,?,?,?,?)',
+        ['E100', 'Curcumin (from turmeric)', 'Vegan', 'None','Colours, Yellow-orange','Approved in the EU. Approved in the US.']);
+
+    await db.rawInsert(
+        'INSERT INTO $table(_title,_name,_suitablefor,_description,_category, _status) VALUES(?,?,?,?,?,?)',
+        ['E101', 'Riboflavin (Vitamin B2), formerly called lactoflavin', 'Hey', 'Colours Yellow-orange','Approved in the EU. Approved in the US']);
+
+    await db.rawInsert(
+        'INSERT INTO $table(_title,_name,_suitablefor,_description,_category, _status) VALUES(?,?,?,?,?,?)',
+        ['E201', 'Bla', 'Bla', '', 'Vegan','']);
+
+    await db.rawInsert(
+        'INSERT INTO $table(_title,_name,_suitablefor,_description,_category, _status) VALUES(?,?,?,?,?,?)',
+        ['', '', '', '', '','']);
+
   }
 
 

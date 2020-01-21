@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_vegan/models/dev_only.dart';
 import 'package:go_vegan/screens/login_page.dart';
-import 'screens/picture_scanner.dart';
+import 'screens/main_page.dart';
 
 
 void main() {

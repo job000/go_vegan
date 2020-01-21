@@ -3,7 +3,6 @@ import 'dart:io';
 import 'dart:ui';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:flutter/material.dart';
-import 'package:go_vegan/components/drawer_page.dart';
 import 'package:go_vegan/components/gallery_screen.dart';
 import 'package:go_vegan/components/string_manipulation.dart';
 import 'package:go_vegan/models/additives_data.dart';
@@ -16,10 +15,10 @@ import 'package:go_vegan/components/custom_showDialog.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:search_widget/search_widget.dart';
 
 class PictureScanner extends StatefulWidget {
-  static final String screenId = "PictureScanner";
+
+  static final String screenId = "mainPage";
 
   @override
   State<StatefulWidget> createState() => _PictureScannerState();
@@ -27,6 +26,7 @@ class PictureScanner extends StatefulWidget {
 
 class _PictureScannerState extends State<PictureScanner>
     with TickerProviderStateMixin {
+
   Color listTileColor;
   File _imageFile;
   Size _imageSize;
@@ -44,6 +44,7 @@ class _PictureScannerState extends State<PictureScanner>
 
   _getImageFromGallery() async {
     _imageFile = await GalleryImage.openGallery();
+
     _getAndScanImage();
   }
 
@@ -134,6 +135,7 @@ class _PictureScannerState extends State<PictureScanner>
             ),
           );
         });
+
   }
 
   @override
@@ -142,7 +144,7 @@ class _PictureScannerState extends State<PictureScanner>
     super.initState();
     additivesFromImage = [];
     _startCamera();
-    insert();
+
     //_getAndScanImage();
   }
 
@@ -235,9 +237,11 @@ class _PictureScannerState extends State<PictureScanner>
 
   String search = "";
   TextEditingController textController;
+
   @override
   Widget build(BuildContext context) {
     var db = DatabaseHelper;
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -307,7 +311,7 @@ class _PictureScannerState extends State<PictureScanner>
 
   List listResult = [];
   listOfSearch(String _search) async {
-    listResult = await query("my_table", _search);
+    listResult = await query("additivesTable", _search);
     print("FRA listOfSearch $listResult");
   }
 
@@ -355,6 +359,7 @@ class _PictureScannerState extends State<PictureScanner>
                             ),
                             onTap: () {
                               navigateToDetail(snapshot.data[position].row[1]);
+
                             },
                             title: Text(
                               snapshot.data[position].row[1].toString(),
@@ -396,7 +401,7 @@ class _PictureScannerState extends State<PictureScanner>
       );
     } else {
       return FutureBuilder<List>(
-        future: getAllRecords("my_table"),
+        future: getAllRecords("additivesTable"),
         initialData: List(),
         builder: (context, snapshot) {
           return snapshot.hasData
@@ -430,6 +435,7 @@ class _PictureScannerState extends State<PictureScanner>
                           ),
                           onTap: () {
                             navigateToDetail(snapshot.data[position].row[1]);
+
                           },
                           title: Text(
                             snapshot.data[position].row[1].toString(),
@@ -470,6 +476,7 @@ class _PictureScannerState extends State<PictureScanner>
   Widget _getAdditives() {
     Color textColor;
     additivesFromImage = addToAdditiveList(textRecResult);
+
     String data = '';
     int veganAdditiveCounter = 0;
     int _possiblyVeganAdditiveCounter = 0;
@@ -478,6 +485,7 @@ class _PictureScannerState extends State<PictureScanner>
     //              veganAdditives[i].toLowerCase().trim()
 
     if (additivesFromImage.length > 0) {
+
       //For vegan check
       for (int j = 0; j < additivesFromImage.length; j++) {
         for (int i = 0; i < veganAdditives.length; i++) {
@@ -507,6 +515,7 @@ class _PictureScannerState extends State<PictureScanner>
           }
         }
       }
+
 
       //For Non Vegan check
       for (int j = 0; j < additivesFromImage.length; j++) {
@@ -577,6 +586,7 @@ class _PictureScannerState extends State<PictureScanner>
                           ))),
                 ),
               )),
+
           Expanded(
             flex: 2,
             child: Container(
@@ -584,6 +594,7 @@ class _PictureScannerState extends State<PictureScanner>
               child: ListView.builder(
                 itemCount: additivesFromImage.length,
                 itemBuilder: (context, index) {
+                    _setAdditiveSuitableFor(additivesFromImage[index]); //TODO: FIX THIS because this gives the same value of all the item in the list
                   return Container(
                     decoration: new BoxDecoration(boxShadow: [
                       new BoxShadow(
@@ -612,6 +623,7 @@ class _PictureScannerState extends State<PictureScanner>
                                         width: 1.0, color: Colors.white24))),
                             child: Icon(Icons.info, color: Colors.white),
                           ),
+
                           title: Text(
                             additivesFromImage[index],
                             style: TextStyle(
@@ -622,7 +634,10 @@ class _PictureScannerState extends State<PictureScanner>
                             children: <Widget>[
                               Icon(Icons.linear_scale,
                                   color: Colors.yellowAccent),
-                              Text("Additives",
+                              Text(
+                                  _getAdditiveSuitableFor() == null
+                                      ? ''
+                                      : _getAdditiveSuitableFor(),
                                   style: TextStyle(color: Colors.white))
                             ],
                           ),
@@ -633,6 +648,7 @@ class _PictureScannerState extends State<PictureScanner>
                               navigateToDetail(additivesFromImage[index]);
                             });
                           },
+
                         ),
                       ),
                     ),
@@ -644,6 +660,30 @@ class _PictureScannerState extends State<PictureScanner>
         ],
       ),
     );
+  }
+
+
+  String _tableName = 'additivesTable';
+  String _suitableFor; //TODO: CREATE DYNAMIC SUITABLE when user gets image or
+ void _setAdditiveSuitableFor(String identifier) async {
+    Map result;
+      List the = await query(_tableName, identifier);
+      result = the.asMap();
+      debugPrint("IDENTIFIER ER: $identifier");
+    debugPrint('HELLLLOOOOOOOOA: ${result.toString()}');
+      for (int key in result.keys) {
+        debugPrint("Detter er: ${result[key]['_title'].toString()}");
+        if (result[key]['_title'].toString() == identifier) {
+          setState(() {
+            _suitableFor = result[key]['_suitablefor'].toString();
+            debugPrint("_SUITABLEFOR ER: $_suitableFor");
+          });
+        }
+      }
+  }
+
+  String _getAdditiveSuitableFor() {
+    return _suitableFor;
   }
 
   void navigateToDetail(String additiveIdentifier) async {

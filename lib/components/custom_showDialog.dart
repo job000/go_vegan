@@ -23,7 +23,7 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
   Widget build(BuildContext context) {
     _setAdditiveTitle(identifier);
     _setAdditiveName(identifier);
-    _setAdditiveColour(identifier);
+    _setAdditiveCategory(identifier);
     _setAdditiveDescription(identifier);
 
     return Dialog(
@@ -79,7 +79,7 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
                   ) //
                       ),
                   SafeArea(
-                    child: _getAdditiveName() == null
+                    child: _getAdditiveTitle() == null
                         ? noData()
                         : Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -114,7 +114,7 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
                                         fontSize: 15.0,
                                         color: Colors.black54)),
                                 SizedBox(height: 5.0),
-                                Text("Color:",
+                                Text("Category Type:",
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         letterSpacing: 0.3,
@@ -122,9 +122,26 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
                                         color: Colors.black54)),
                                 SizedBox(height: 3.0),
                                 Text(
-                                    _getAdditiveColour() == null
+                                    _getAdditiveCategory() == null
                                         ? ''
-                                        : _getAdditiveColour(),
+                                        : _getAdditiveCategory(),
+                                    style: TextStyle(
+                                        letterSpacing: 0.3,
+                                        fontSize: 15.0,
+                                        color: Colors.black54)),
+                                SizedBox(height: 5.0),
+                                SizedBox(height: 20.0),
+                                Text("Suitable for:",
+                                    style: TextStyle(
+                                        letterSpacing: 0.3,
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black54)),
+                                SizedBox(height: 3.0),
+                                Text(
+                                    _getAdditiveSuitableFor() == null
+                                        ? ''
+                                        : _getAdditiveSuitableFor(),
                                     style: TextStyle(
                                         letterSpacing: 0.3,
                                         fontSize: 15.0,
@@ -221,18 +238,19 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
     );
   }
 
-  String _title, _name, _colour, _description;
+  String _title, _name, _category, _suitableFor, _description;
   //Setters
+  String _tableName = 'additivesTable';
 
   void _setAdditiveTitle(String additiveIdentifier) async {
     Map result;
-    List the = await query('my_table', additiveIdentifier);
+    List the = await query(_tableName, additiveIdentifier);
     result = the.asMap();
 
     for (int key in result.keys) {
-      if (result[key]['_name'].toString() == additiveIdentifier) {
+      if (result[key]['_title'].toString() == additiveIdentifier) {
         setState(() {
-          _title = result[key]['_name'].toString();
+          _title = result[key]['_title'].toString();
         });
         break;
       }
@@ -241,7 +259,7 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
 
   void _setAdditiveName(String additiveIdentifier) async {
     Map result;
-    List the = await query('my_table', additiveIdentifier);
+    List the = await query(_tableName, additiveIdentifier);
     result = the.asMap();
 
     for (int key in result.keys) {
@@ -254,14 +272,14 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
     }
   }
 
-  void _setAdditiveColour(String additiveIdentifier) async {
+  void _setAdditiveCategory(String additiveIdentifier) async {
     Map result;
-    List the = await query('my_table', additiveIdentifier);
+    List the = await query(_tableName, additiveIdentifier);
     result = the.asMap();
     for (int key in result.keys) {
-      if (result[key]['_name'].toString() == additiveIdentifier) {
+      if (result[key]['_title'].toString() == additiveIdentifier) {
         setState(() {
-          _colour = result[key]['_color'].toString();
+          _category = result[key]['_category'].toString();
         });
         break;
       }
@@ -270,11 +288,11 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
 
   void _setAdditiveDescription(String additiveIdentifier) async {
     Map result;
-    List the = await query('my_table', additiveIdentifier);
+    List the = await query(_tableName, additiveIdentifier);
     result = the.asMap();
     debugPrint('HELLLLOOOOOOOOA: ${result.toString()}');
     for (int key in result.keys) {
-      if (result[key]['_name'].toString() == additiveIdentifier) {
+      if (result[key]['_title'].toString() == additiveIdentifier) {
         setState(() {
           _description = result[key]['_description'].toString();
         });
@@ -283,6 +301,20 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
     }
   }
 
+  void _setAdditiveSuitableFor(String additiveIdentifier) async {
+    Map result;
+    List the = await query(_tableName, additiveIdentifier);
+    result = the.asMap();
+    debugPrint('HELLLLOOOOOOOOA: ${result.toString()}');
+    for (int key in result.keys) {
+      if (result[key]['_title'].toString() == additiveIdentifier) {
+        setState(() {
+          _suitableFor = result[key]['_suitablefor'].toString();
+        });
+        break;
+      }
+    }
+  }
   //Getters
   String _getAdditiveTitle() {
     return _title;
@@ -292,8 +324,12 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
     return _name;
   }
 
-  String _getAdditiveColour() {
-    return _colour;
+  String _getAdditiveCategory() {
+    return _category;
+  }
+
+  String _getAdditiveSuitableFor() {
+    return _suitableFor;
   }
 
   String _getAdditiveDescription() {
