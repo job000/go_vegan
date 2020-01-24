@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:flutter/material.dart';
 import 'package:go_vegan/components/gallery_screen.dart';
+import 'package:go_vegan/components/getListOfAdditivesFromImage.dart';
 import 'package:go_vegan/components/string_manipulation.dart';
 import 'package:go_vegan/models/additives_data.dart';
 import 'package:go_vegan/utils/db_helper.dart';
@@ -15,8 +16,9 @@ import 'package:go_vegan/components/custom_showDialog.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-
+GetListOfAdditivesFromImage getListOfAdditivesFromImage = GetListOfAdditivesFromImage();
 class PictureScanner extends StatefulWidget {
+
 
   static final String screenId = "mainPage";
 
@@ -26,6 +28,7 @@ class PictureScanner extends StatefulWidget {
 
 class _PictureScannerState extends State<PictureScanner>
     with TickerProviderStateMixin {
+
 
   Color listTileColor;
   File _imageFile;
@@ -44,7 +47,6 @@ class _PictureScannerState extends State<PictureScanner>
 
   _getImageFromGallery() async {
     _imageFile = await GalleryImage.openGallery();
-
     _getAndScanImage();
   }
 
@@ -238,10 +240,10 @@ class _PictureScannerState extends State<PictureScanner>
   String search = "";
   TextEditingController textController;
 
+
   @override
   Widget build(BuildContext context) {
     var db = DatabaseHelper;
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -254,7 +256,7 @@ class _PictureScannerState extends State<PictureScanner>
                       child: TextField(
                         maxLength: 5,
                         textAlign: TextAlign.center,
-                        autofocus: true,
+                        autofocus: false,
                         decoration:InputDecoration(
                           hintText: 'Additive Number',
                           hintStyle: TextStyle(color: Colors.grey),
@@ -490,8 +492,7 @@ class _PictureScannerState extends State<PictureScanner>
       for (int j = 0; j < additivesFromImage.length; j++) {
         for (int i = 0; i < veganAdditives.length; i++) {
           //debugPrint(veganAdditives[i]);
-          if (additivesFromImage[j].toLowerCase().trim() ==
-              veganAdditives[i].toLowerCase().trim()) {
+          if (additivesFromImage[j].toLowerCase().trim() == veganAdditives[i].toLowerCase().trim()) {
             veganAdditiveCounter++;
           } else {
             setState(() {
@@ -549,7 +550,7 @@ class _PictureScannerState extends State<PictureScanner>
       } else if (_possiblyVeganAdditiveCounter > 0 &&
           _nonVeganAdditivesCounter <= 0) {
         setState(() {
-          data = 'Might not be vegan';
+          data = 'May or may not be vegan';
           textColor = Colors.orangeAccent;
           _possiblyVeganAdditiveCounter = 0;
         });
@@ -566,6 +567,7 @@ class _PictureScannerState extends State<PictureScanner>
     }
 
     //return Text(data);
+    //TODO: CREATE DYNAMIC SUITABLE FOR UNDER
     return Center(
       child: Column(
         children: <Widget>[
@@ -577,7 +579,7 @@ class _PictureScannerState extends State<PictureScanner>
                   color: Colors.white,
                   elevation: 10.0,
                   child: Center(
-                      child: Text(data,
+                      child: Text(data, //TODO: ENDRE DETTE TIL vegchecker
                           style: TextStyle(
                             fontSize: 30.0,
                             color: textColor,
@@ -587,104 +589,105 @@ class _PictureScannerState extends State<PictureScanner>
                 ),
               )),
 
-          Expanded(
-            flex: 2,
-            child: Container(
-              color: listTileColor,
-              child: ListView.builder(
-                itemCount: additivesFromImage.length,
-                itemBuilder: (context, index) {
-                    _setAdditiveSuitableFor(additivesFromImage[index]); //TODO: FIX THIS because this gives the same value of all the item in the list
-                  return Container(
-                    decoration: new BoxDecoration(boxShadow: [
-                      new BoxShadow(
-                        color: Colors.white,
-                        blurRadius: 20.0,
-                      ),
-                    ]),
-                    child: Card(
-                      elevation: 8.0,
-                      margin: new EdgeInsets.symmetric(
-                          horizontal: 10.0, vertical: 6.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(40.0)),
-                            color: Color.fromRGBO(64, 75, 96, .9)),
-                        //decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)),
-                        child: ListTile(
-                          contentPadding: EdgeInsets.symmetric(
-                              horizontal: 20.0, vertical: 10.0),
-                          leading: Container(
-                            padding: EdgeInsets.only(right: 12.0),
-                            decoration: new BoxDecoration(
-                                border: new Border(
-                                    right: new BorderSide(
-                                        width: 1.0, color: Colors.white24))),
-                            child: Icon(Icons.info, color: Colors.white),
-                          ),
-
-                          title: Text(
-                            additivesFromImage[index],
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          subtitle: Row(
-                            children: <Widget>[
-                              Icon(Icons.linear_scale,
-                                  color: Colors.yellowAccent),
-                              Text(
-                                  _getAdditiveSuitableFor() == null
-                                      ? ''
-                                      : _getAdditiveSuitableFor(),
-                                  style: TextStyle(color: Colors.white))
-                            ],
-                          ),
-                          trailing: Icon(Icons.keyboard_arrow_right,
-                              color: Colors.white, size: 30.0),
-                          onTap: () {
-                            setState(() {
-                              navigateToDetail(additivesFromImage[index]);
-                            });
-                          },
-
-                        ),
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
-          ),
+          listOfAdditivesFromImage(),
         ],
       ),
     );
   }
 
+  String vegResult="";
+  veganChecker()async{
 
-  String _tableName = 'additivesTable';
-  String _suitableFor; //TODO: CREATE DYNAMIC SUITABLE when user gets image or
- void _setAdditiveSuitableFor(String identifier) async {
-    Map result;
-      List the = await query(_tableName, identifier);
-      result = the.asMap();
-      debugPrint("IDENTIFIER ER: $identifier");
-    debugPrint('HELLLLOOOOOOOOA: ${result.toString()}');
-      for (int key in result.keys) {
-        debugPrint("Detter er: ${result[key]['_title'].toString()}");
-        if (result[key]['_title'].toString() == identifier) {
-          setState(() {
-            _suitableFor = result[key]['_suitablefor'].toString();
-            debugPrint("_SUITABLEFOR ER: $_suitableFor");
-          });
-        }
+      getListOfAdditivesFromImage.veganAdditiveChecker(additivesFromImage).then((result) {
+        print(result);
+        setState(() {
+          vegResult = result;
+          print("RESULT: $result");
+        });
+      });
+
+  }
+
+  String vegCheckResult(){
+    return vegResult;
+  }
+
+
+  Expanded listOfAdditivesFromImage(){
+    veganChecker();
+        return Expanded(
+          flex: 2,
+          child: FutureBuilder<List>(
+            future: getListOfAdditivesFromImage.listOfQuery(additivesFromImage),
+            initialData: List(),
+            builder: (context, snapshot) {
+              return snapshot.hasData
+                  ? ListView.builder(
+
+                scrollDirection: Axis.vertical,
+                shrinkWrap: true,
+                itemCount: snapshot.data.length,
+                itemBuilder: (_, int position) {
+                  final item = snapshot.data[position];
+                  //get your item data here ...
+                  return Card(
+                    elevation: 8.0,
+                    margin: new EdgeInsets.symmetric(
+                        horizontal: 10.0, vertical: 6.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                              bottomRight: Radius.circular(40.0)),
+                          color: Color.fromRGBO(64, 75, 96, .9)),
+                      child: ListTile(
+                        //TODO: Add another type of Icon
+
+                        contentPadding: EdgeInsets.symmetric(
+                            horizontal: 20.0, vertical: 10.0),
+                        leading: Container(
+                          padding: EdgeInsets.only(right: 12.0),
+                          decoration: new BoxDecoration(
+                              border: new Border(
+                                  right: new BorderSide(
+                                      width: 1.0, color: Colors.white24))),
+                          child: Icon(Icons.info, color: Colors.white),
+                        ),
+                        onTap: () {
+                          navigateToDetail(snapshot.data[position].row[1]);
+                        },
+
+                        title: Text(
+                          snapshot.data[position].row[1].toString(),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Row(
+                          children: <Widget>[
+                            Icon(Icons.linear_scale,
+                                color: Colors.yellowAccent),
+                            Text(snapshot.data[position].row[3].toString(),
+                                style: TextStyle(color: Colors.white))
+                          ],
+                        ),
+                        trailing: Icon(Icons.keyboard_arrow_right,
+                            color: Colors.white, size: 30.0),
+                      ),
+                    ),
+                  );
+
+                },
+
+              )
+                  : Center(
+                child: CircularProgressIndicator(),
+              );
+            },
+          ),
+        );
+
       }
-  }
 
-  String _getAdditiveSuitableFor() {
-    return _suitableFor;
-  }
 
   void navigateToDetail(String additiveIdentifier) async {
     //NoteDetail(note, title);
@@ -699,6 +702,7 @@ class _PictureScannerState extends State<PictureScanner>
 
   @override
   void dispose() {
+
     _barcodeDetector.close();
     _faceDetector.close();
     _imageLabeler.close();

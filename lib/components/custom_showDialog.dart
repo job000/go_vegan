@@ -25,6 +25,7 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
     _setAdditiveName(identifier);
     _setAdditiveCategory(identifier);
     _setAdditiveDescription(identifier);
+    _setAdditiveSuitableFor(identifier);
 
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.0)),
@@ -46,7 +47,7 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
               padding: EdgeInsets.only(
                 top: 2.0,
               ),
-              margin: EdgeInsets.only(top: 13.0, right: 8.0),
+              margin: EdgeInsets.only(top: 10.0, right: 8.0),
               decoration: BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.rectangle,
@@ -62,9 +63,7 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  SizedBox(
-                    height: 20.0,
-                  ),
+
                   Center(
                       child: Padding(
                     padding: const EdgeInsets.all(2.0),
@@ -97,7 +96,7 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
                                           fontSize: 25.0,
                                           color: Colors.black54)),
                                 ),
-                                SizedBox(height: 20.0),
+                                SizedBox(height: 10.0),
                                 Text("Name(s):",
                                     style: TextStyle(
                                         letterSpacing: 0.3,
@@ -130,7 +129,7 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
                                         fontSize: 15.0,
                                         color: Colors.black54)),
                                 SizedBox(height: 5.0),
-                                SizedBox(height: 20.0),
+
                                 Text("Suitable for:",
                                     style: TextStyle(
                                         letterSpacing: 0.3,
@@ -263,7 +262,7 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
     result = the.asMap();
 
     for (int key in result.keys) {
-      if (result[key]['_name'].toString() == additiveIdentifier) {
+      if (result[key]['_title'].toString() == additiveIdentifier) {
         setState(() {
           _name = result[key]['_name'].toString();
         });
