@@ -14,10 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      title: 'Butikkvare',
+      title: 'Additive Search',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: Colors.white),
-
+      theme: ThemeData(primaryColor: Colors.cyanAccent[100]),
       initialRoute: PictureScanner.screenId,
       routes: {
 

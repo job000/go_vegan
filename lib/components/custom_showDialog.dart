@@ -27,11 +27,14 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
     _setAdditiveDescription(identifier);
     _setAdditiveSuitableFor(identifier);
 
-    return Dialog(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.0)),
-      elevation: 0.0,
-      backgroundColor: Colors.transparent,
-      child: dialogContent(context),
+    return Hero(
+      tag: 'identifier',
+      child: Dialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.0)),
+        elevation: 0.0,
+        backgroundColor: Colors.transparent,
+        child: dialogContent(context),
+      ),
     );
   }
 
@@ -277,9 +280,8 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
     result = the.asMap();
     for (int key in result.keys) {
       if (result[key]['_title'].toString() == additiveIdentifier) {
-        setState(() {
           _category = result[key]['_category'].toString();
-        });
+
         break;
       }
     }
@@ -289,12 +291,10 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
     Map result;
     List the = await query(_tableName, additiveIdentifier);
     result = the.asMap();
-    debugPrint('HELLLLOOOOOOOOA: ${result.toString()}');
+    //debugPrint('HELLLLOOOOOOOOA: ${result.toString()}');
     for (int key in result.keys) {
       if (result[key]['_title'].toString() == additiveIdentifier) {
-        setState(() {
           _description = result[key]['_description'].toString();
-        });
         break;
       }
     }
@@ -304,12 +304,10 @@ class _CustomDialogPageState extends State<CustomDialogPage> {
     Map result;
     List the = await query(_tableName, additiveIdentifier);
     result = the.asMap();
-    debugPrint('HELLLLOOOOOOOOA: ${result.toString()}');
+    //debugPrint('HELLLLOOOOOOOOA: ${result.toString()}');
     for (int key in result.keys) {
       if (result[key]['_title'].toString() == additiveIdentifier) {
-        setState(() {
           _suitableFor = result[key]['_suitablefor'].toString();
-        });
         break;
       }
     }
