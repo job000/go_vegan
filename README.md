@@ -1,6 +1,7 @@
-# go_vegan
+# GoVeGan
 
-Vegan application
+Additive checker application.
+This
 
 ## Getting Started
 
@@ -14,3 +15,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+![kissclipart-drawing-clipart-avocado-drawing-fruit-23ead2501510054a](https://user-images.githubusercontent.com/28447568/78143459-9c6e1880-742e-11ea-93dc-f4c10456cbdf.png)
+
