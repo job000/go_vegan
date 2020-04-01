@@ -7,7 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:go_vegan/components/gallery_screen.dart';
 import 'package:go_vegan/components/getListOfAdditivesFromImage.dart';
 import 'package:go_vegan/components/string_manipulation.dart';
+import 'package:go_vegan/main.dart';
 import 'package:go_vegan/models/additives_data.dart';
+import 'package:go_vegan/models/dev_only.dart';
 import 'package:go_vegan/utils/db_helper.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:camera/camera.dart';
@@ -17,6 +19,7 @@ import 'package:go_vegan/components/veganAdditives.dart';
 import 'package:go_vegan/components/custom_showDialog.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
+import 'package:go_vegan/components/custom_errorDialog.dart';
 
 class PictureScanner extends StatefulWidget {
   static final String screenId = "mainPage";
@@ -61,8 +64,8 @@ class _PictureScannerState extends State<PictureScanner>
     _getAndScanImage();
   }
 
+  bool triggerAfterDuration = false;
   Future<void> _showChoiceDialog(BuildContext context) {
-
     return showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -93,13 +96,12 @@ class _PictureScannerState extends State<PictureScanner>
                       child: GestureDetector(
                         onTap: () {
                           //Navigator.of(context).pop();
-                         setState(() {
-                           Navigator.pop(context);
-                           additivesFromImage.clear();
-                           _imageFile = null;
-                         });
+                          setState(() {
+                            Navigator.pop(context);
+                            additivesFromImage.clear();
+                            _imageFile = null;
+                          });
                           _getImageFromGallery();
-
                         },
                         child: Row(
                           children: <Widget>[
@@ -134,7 +136,6 @@ class _PictureScannerState extends State<PictureScanner>
                           });
                           //Navigator.of(context).pop();
                           _getImageFromCamera();
-
                         },
                         child: Row(
                           children: <Widget>[
@@ -193,7 +194,6 @@ class _PictureScannerState extends State<PictureScanner>
   }
 
   var getListOfAdditivesFromImage = GetListOfAdditivesFromImage();
-
   FocusNode focusNode;
 
   @override
@@ -303,7 +303,6 @@ class _PictureScannerState extends State<PictureScanner>
     additivesFromImage.clear(); //TODO: THIS DID THE TRICK: AVOIDING DUPLICATES
 
     return Scaffold(
-
       backgroundColor: Colors.blueGrey,
       body: SafeArea(
         child: _imageFile == null
@@ -565,7 +564,7 @@ class _PictureScannerState extends State<PictureScanner>
       );
     } else {
       return FutureBuilder<List>(
-        future: getAllRecords("additivesTable"),
+        future: getAllRecords("additivesTable"), //Database
         initialData: List(),
         builder: (context, snapshot) {
           return snapshot.hasData
@@ -640,7 +639,7 @@ class _PictureScannerState extends State<PictureScanner>
   List<String> nonVeganAdditives = Vegan.nonVegan;
 
   List additivesFromImage = [];
-  String data = '';
+  String data;
   int veganAdditiveCounter = 0;
   int _possiblyVeganAdditiveCounter = 0;
   int _nonVeganAdditivesCounter = 0;
@@ -650,8 +649,8 @@ class _PictureScannerState extends State<PictureScanner>
     });
   }
 
-  Widget _getAdditives()  {
-    Color textColor=Colors.white70;
+  Widget _getAdditives() {
+    Color textColor = Colors.white70;
     getAdditives();
     print("Lengde er: ${additivesFromImage.length}");
 
@@ -666,9 +665,9 @@ class _PictureScannerState extends State<PictureScanner>
               veganAdditives[i].toLowerCase().trim()) {
             veganAdditiveCounter++;
             setState(() {
-              data="Vegan";
+              data = "Vegan";
             });
-
+            break;
           }
         }
       }
@@ -681,8 +680,11 @@ class _PictureScannerState extends State<PictureScanner>
               possiblyVeganAdditives[i].toLowerCase().trim()) {
             _possiblyVeganAdditiveCounter++;
             setState(() {
-              data="May or may not be vegan";
+              data = "May or may not be vegan";
             });
+            break;
+          } else {
+            data = "";
           }
         }
       }
@@ -691,11 +693,15 @@ class _PictureScannerState extends State<PictureScanner>
       for (int j = 0; j < additivesFromImage.length; j++) {
         for (int i = 0; i < nonVeganAdditives.length; i++) {
           //debugPrint(veganAdditives[i]);
-          if (additivesFromImage[j].toLowerCase().trim() == nonVeganAdditives[i].toLowerCase().trim()) {
+          if (additivesFromImage[j].toLowerCase().trim() ==
+              nonVeganAdditives[i].toLowerCase().trim()) {
             _nonVeganAdditivesCounter++;
             setState(() {
-              data="Not vegan";
+              data = "Not vegan";
             });
+            break;
+          } else {
+            data = "";
           }
         }
       }
@@ -713,14 +719,15 @@ class _PictureScannerState extends State<PictureScanner>
           textColor = Colors.greenAccent;
           //veganAdditiveCounter = 0;
         });
-      }  if (_possiblyVeganAdditiveCounter > 0 &&
-          _nonVeganAdditivesCounter <= 0 && veganAdditiveCounter<=0) {
+      } else if (_possiblyVeganAdditiveCounter > 0 &&
+          _nonVeganAdditivesCounter <= 0 &&
+          veganAdditiveCounter <= 0) {
         setState(() {
           data = 'May or may not be vegan';
           textColor = Colors.orangeAccent;
           //_possiblyVeganAdditiveCounter = 0;
         });
-      } if (_nonVeganAdditivesCounter > 0) {
+      } else if (_nonVeganAdditivesCounter > 0) {
         setState(() {
           data = 'Not Vegan';
           textColor = Colors.redAccent;
@@ -728,150 +735,128 @@ class _PictureScannerState extends State<PictureScanner>
         });
       }
 
-      if(data.length<=0){
-         setState(() {
-           data="";
-         });
-      }else{
-
-        setState(() {
-          data=data;
-          data="";
-        });
-
-      }
-
-    //return Text(data);
-    //TODO: CREATE DYNAMIC SUITABLE FOR UNDER
-    return Center(
-      child: Hero(
-        tag: 'identifier',
-        child: GestureDetector(
-          onHorizontalDragStart: (DragStartDetails start) {
+      //return Text(data);
+      //TODO: CREATE DYNAMIC SUITABLE FOR UNDER
+      return Center(
+        child: Hero(
+          tag: 'identifier',
+          child: GestureDetector(
+            onHorizontalDragStart: (DragStartDetails start) {
               Navigator.pushNamed(context, PictureScanner.screenId);
               setState(() {
                 Navigator.pop(context);
                 additivesFromImage.clear();
                 _imageFile = null;
               });
-          },
-          child: FutureBuilder<List>(
-            future: getListOfAdditivesFromImage.listOfQuery(additivesFromImage),
-            initialData: List(),
-            builder: (context, snapshot) {
-              print("snapshot.data: ${snapshot.data}");
-              return snapshot.hasData
-                  ? Column(
-                      children: <Widget>[
-                        Expanded(
-                          flex: 1,
-                          child: SizedBox(
-                            width: 250.0,
-                            child: Center(
-                              child: TypewriterAnimatedTextKit(
-                                  onTap: () {
-                                    setState(() {
-                                      this.data=getData();
-                                    });
-                                  },
-                                  text: [data],
-                                  textStyle: TextStyle(
-                                    color: textColor,
-                                    fontSize: 30.0,
-                                    fontFamily: "AbrilFatface",
+            },
+            child: FutureBuilder<List>(
+              future:
+                  getListOfAdditivesFromImage.listOfQuery(additivesFromImage),
+              initialData: List(),
+              builder: (context, snapshot) {
+                return snapshot.hasData
+                    ? Column(
+                        children: <Widget>[
+                          //Could add another Expanded here
+                          Expanded(
+                            flex: 6,
+                            child: ListView.builder(
+                              scrollDirection: Axis.vertical,
+                              shrinkWrap: true,
+                              itemCount: snapshot.data.length,
+                              itemBuilder: (_, int position) {
+                                final item = snapshot.data[position];
+                                //get your item data here ...
+                                return Card(
+                                  elevation: 8.0,
+                                  margin: new EdgeInsets.symmetric(
+                                      horizontal: 10.0, vertical: 6.0),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.only(
+                                            bottomRight: Radius.circular(40.0)),
+                                        color: Color.fromRGBO(64, 75, 96, .9)),
+                                    child: ListTile(
+                                      //TODO: Add another type of Icon
+                                      key: Key(snapshot.data[position].row[1]),
+                                      contentPadding: EdgeInsets.symmetric(
+                                          horizontal: 20.0, vertical: 10.0),
+                                      leading: Container(
+                                        padding: EdgeInsets.only(right: 12.0),
+                                        decoration: new BoxDecoration(
+                                            border: new Border(
+                                                right: new BorderSide(
+                                                    width: 1.0,
+                                                    color: Colors.white24))),
+                                        child: Icon(Icons.info,
+                                            color: Colors.white),
+                                      ),
+                                      onTap: () {
+                                        navigateToDetail(
+                                            snapshot.data[position].row[1]);
+                                      },
+
+                                      title: Text(
+                                        snapshot.data[position].row[1]
+                                            .toString(),
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      subtitle: Row(
+                                        children: <Widget>[
+                                          Icon(Icons.colorize,
+                                              color: Colors.yellowAccent),
+                                          Text(
+                                              snapshot.data[position].row[3]
+                                                  .toString(),
+                                              style: TextStyle(
+                                                  color: Colors.white))
+                                        ],
+                                      ),
+                                      trailing: Icon(Icons.keyboard_arrow_right,
+                                          color: Colors.white, size: 30.0),
+                                    ),
                                   ),
-                                  textAlign: TextAlign.start,
-                                  alignment: AlignmentDirectional
-                                      .centerStart // or Alignment.topLeft
-                                  ),
+                                );
+                              },
                             ),
                           ),
+                        ],
+                      )
+                    : Center(
+                        child: CircularProgressIndicator(
+                          backgroundColor: Colors.redAccent,
+                          strokeWidth: 10,
                         ),
-                        Expanded(
-                          flex: 6,
-                          child: ListView.builder(
-                            scrollDirection: Axis.vertical,
-                            shrinkWrap: true,
-                            itemCount: snapshot.data.length,
-                            itemBuilder: (_, int position) {
-                              final item = snapshot.data[position];
-                              //get your item data here ...
-                              return Card(
-                                elevation: 8.0,
-                                margin: new EdgeInsets.symmetric(
-                                    horizontal: 10.0, vertical: 6.0),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.only(
-                                          bottomRight: Radius.circular(40.0)),
-                                      color: Color.fromRGBO(64, 75, 96, .9)),
-                                  child: ListTile(
-                                    //TODO: Add another type of Icon
-                                    key: Key(snapshot.data[position].row[1]),
-                                    contentPadding: EdgeInsets.symmetric(
-                                        horizontal: 20.0, vertical: 10.0),
-                                    leading: Container(
-                                      padding: EdgeInsets.only(right: 12.0),
-                                      decoration: new BoxDecoration(
-                                          border: new Border(
-                                              right: new BorderSide(
-                                                  width: 1.0,
-                                                  color: Colors.white24))),
-                                      child:
-                                          Icon(Icons.info, color: Colors.white),
-                                    ),
-                                    onTap: () {
-                                      navigateToDetail(
-                                          snapshot.data[position].row[1]);
-                                    },
-
-                                    title: Text(
-                                      snapshot.data[position].row[1].toString(),
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    subtitle: Row(
-                                      children: <Widget>[
-                                        Icon(Icons.colorize,
-                                            color: Colors.yellowAccent),
-                                        Text(
-                                            snapshot.data[position].row[3]
-                                                .toString(),
-                                            style:
-                                                TextStyle(color: Colors.white))
-                                      ],
-                                    ),
-                                    trailing: Icon(Icons.keyboard_arrow_right,
-                                        color: Colors.white, size: 30.0),
-                                  ),
-                                ),
-                              );
-                            },
-                          ),
-                        ),
-                      ],
-                    )
-                  : Center(
-                      child: CircularProgressIndicator(
-                        backgroundColor: Colors.redAccent,
-                        strokeWidth: 10,
-                      ),
-                    );
-            },
+                      );
+              },
+            ),
           ),
         ),
-      ),
-    );
+      );
     } else {
-      return Center(child: CircularProgressIndicator(backgroundColor: Colors.redAccent,),);
+      Timer(Duration(seconds: 2), () {
+        setState(() {
+          triggerAfterDuration = true;
+        });
+      });
+
+      if (triggerAfterDuration) {
+        return customErrorDialog(context);
+      } else {
+        return Center(
+          child: CircularProgressIndicator(
+            backgroundColor: Colors.redAccent,
+          ),
+        );
+      }
     }
   }
 
-  String getData(){
+  String getData() {
     return this.data;
   }
-
 
   void navigateToDetail(String additiveIdentifier) async {
     //NoteDetail(note, title);
@@ -894,7 +879,6 @@ class _PictureScannerState extends State<PictureScanner>
     _cloudImageLabeler.close();
     _recognizer.close();
     _cloudRecognizer.close();
-
     super.dispose();
   }
 }

@@ -39,6 +39,7 @@ dependencies:
   search_widget: ^1.0.1
   async: ^2.4.0
   animated_text_kit: ^2.0.0
+  flutter_launcher_name: ^0.0.1
   #fancy_bottom_navigation: ^0.3.2
 
 
@@ -46,7 +47,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-
+flutter_launcher_name:
+  name: "GoVeGaN"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

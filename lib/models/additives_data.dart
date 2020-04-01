@@ -54,5 +54,5 @@ insert() async {
   Database db = await DatabaseHelper.instance.database;
 
   // show the results: print all rows in the db
-  print(await db.query(DatabaseHelper.table));
+  //print(await db.query(DatabaseHelper.table));
 }

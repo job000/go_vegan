@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primaryColor: Colors.cyanAccent[100]),
       initialRoute: PictureScanner.screenId,
       routes: {
-
         LogInPage.screenId:(context)=>LogInPage(),
         PictureScanner.screenId:(context)=> PictureScanner(),
         HomePage.screenId:(context)=> HomePage(),
