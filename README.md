@@ -1,6 +1,6 @@
 # GoVeGan
 
-Additive checker application.
+Additive checker application. An app for Android and ios using flutter/Dart programming language.
 
 
 For help getting started with Flutter, view our
