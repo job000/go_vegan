@@ -1,7 +1,7 @@
 # GoVeGan
 
 Additive checker application.
-This
+
 
 ## Getting Started
 
@@ -16,5 +16,7 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+## Applications app logo
 ![kissclipart-drawing-clipart-avocado-drawing-fruit-23ead2501510054a](https://user-images.githubusercontent.com/28447568/78143459-9c6e1880-742e-11ea-93dc-f4c10456cbdf.png)
+
 
